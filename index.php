@@ -2,4 +2,6 @@
 
 echo 'bonjour';
 
+echo 'bonsoir';
+
 ?>
