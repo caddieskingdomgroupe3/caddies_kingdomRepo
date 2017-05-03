@@ -20,4 +20,6 @@ echo ' a que coucou'
 echo ' a que coucou'
 
 echo 'salut'
+
+echo 'bonjour';
 ?>
