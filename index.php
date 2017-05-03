@@ -1,4 +1,4 @@
-<?php
+hp
 
 echo 'bonjour';
 
@@ -19,4 +19,5 @@ echo ' a que coucou'
 
 echo ' a que coucou'
 
+echo 'salut'
 ?>
