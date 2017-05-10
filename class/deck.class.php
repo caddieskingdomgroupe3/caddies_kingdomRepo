@@ -5,7 +5,7 @@ class Deck {
 	private $_d_team_id;
 	private $_d_team_card;
 
-	// Méthode Construct
+	// Method Construct
 
 	public function __construct($datas) {
 		$this->hydrate($datas);
@@ -28,6 +28,9 @@ class Deck {
 	}
 
 	public function getDteamCard() {
+
+	}
+	private function hydrate() {
 
 	}
 }

@@ -14,5 +14,7 @@ class Game {
 		$this->hydrate($datas);
 	}
 
+	private function hydrate() {
 
+	}
 }
