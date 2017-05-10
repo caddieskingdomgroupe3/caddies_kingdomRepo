@@ -14,7 +14,31 @@ class Game {
 		$this->hydrate($datas);
 	}
 
-	private function hydrate() {
+	public function __toString() {
+    }
 
-	}
+	/**
+     * --------------------------------------------------
+     * METHODS
+     * --------------------------------------------------
+    **/
+    /**
+     * hydrate - Hydrate the object properties
+     * @param   array   $datas
+     * @return  
+    **/
+    private function hydrate( $datas ) {
+        foreach( $datas as $key=>$value ) :
+            
+            $key = str_replace( 'd_', ' ', $key );
+            $key = str_replace( '_', ' ', $key );
+            $key = ucwords( $key );
+            $key = str_replace( ' ', '', $key );
+            $method = 'set' . $key;
+
+            if( method_exists( $this, $method) )
+                $this->$method( $value );
+
+        endforeach;
+    }
 }

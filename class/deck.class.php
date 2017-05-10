@@ -3,7 +3,7 @@
 class Deck {
 
 	private $_d_team_id;
-	private $_d_team_card;
+	
 
 	// Method Construct
 
@@ -17,20 +17,45 @@ class Deck {
 		$this->_d_team_id = $value;
 	}
 
-	public function setDteamCard($value) {
-		$this->_d_team_card = $value;
-	}
+	
 
 	// Getters
 
 	public function getDteamId() {
-
+		return $this->_d_team_id;
 	}
 
-	public function getDteamCard() {
+	
 
-	}
-	private function hydrate() {
+	// Function toString
+	
+	public function __toString() {
 
-	}
+    }
+
+    /**
+     * --------------------------------------------------
+     * METHODS
+     * --------------------------------------------------
+    **/
+    /**
+     * hydrate - Hydrate the object properties
+     * @param   array   $datas
+     * @return  
+    **/
+    private function hydrate( $datas ) {
+        foreach( $datas as $key=>$value ) :
+            
+            $key = str_replace( 'd_', ' ', $key );
+            $key = str_replace( '_', ' ', $key );
+            $key = ucwords( $key );
+            $key = str_replace( ' ', '', $key );
+            $method = 'set' . $key;
+
+            if( method_exists( $this, $method) )
+                $this->$method( $value );
+
+        endforeach;
+    }
+
 }

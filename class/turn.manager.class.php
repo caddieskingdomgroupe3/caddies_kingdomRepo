@@ -8,7 +8,7 @@ class Turn extends TurnManager
 	private $_t_id;
 	private $_t_mana;
 	
-	private function __construct()
+	private function __construct($datas)
 	{
 		# code...
 	}
@@ -36,6 +36,10 @@ class Turn extends TurnManager
 	private function endTurn()
 	{
 
+	}
+	private function hydrate()
+	{
+		
 	}
 
 
