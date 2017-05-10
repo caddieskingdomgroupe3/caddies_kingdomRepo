@@ -1,10 +1,6 @@
 <?php
 class CardManager{
 
-	public function __construct(){
-
-	}
-
 	public function createCard(){
 
 	}
@@ -18,6 +14,6 @@ class CardManager{
 	}
 
 	public function getListCard(){
-		
+
 	}
 }
